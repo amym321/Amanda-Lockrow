@@ -7,6 +7,8 @@
 {% form 'product', product, id: "AddToCartForm", class: "product_form", data-product-form:product_form_config, data-product-id: product.id %}
 
   {% render 'product-price', variant: current_variant, product: product %}
+{% comment %} added code - am. Shop Pay Banner {% endcomment %}
+  {{ form | payment_terms }}
 
   {% if product.options.size > 1 %}
     <div class="select" {% if product.variants.size == 1 %}style="display: none;"{% endif %}>
