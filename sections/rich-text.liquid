@@ -4,7 +4,8 @@
     <div class="desktop-12 tablet-6 mobile-3">
 
       {% if section.settings.title != blank %}
-      <div class="section-title lines"><h1>{{ section.settings.title | escape }}</h1></div>
+        {% comment %} code change - am. changed h3 to h1 {% endcomment %}
+        <div class="section-title lines"><h1>{{ block.settings.title | escape }}</h1></div>
       {% endif %}
 
 
